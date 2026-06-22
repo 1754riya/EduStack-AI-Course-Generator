@@ -1,17 +1,15 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import Footer from "./_components/Footer";
+import CustomCursor from "./_components/CustomCursor";
 
 export default function Home() {
   return (
     <div>
-      {/* HEADER */}
+      <CustomCursor />
       <Header />
-      {/* Hero Section */}
       <Hero />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

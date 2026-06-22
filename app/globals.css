@@ -91,3 +91,22 @@
 .dark ::-webkit-scrollbar-thumb { background: hsl(222 47% 22%); }
 ::-webkit-scrollbar-thumb:hover { background: hsl(220 9% 65%); }
 .dark ::-webkit-scrollbar-thumb:hover { background: hsl(222 47% 30%); }
+
+/* ── Hero grid mesh ─────────────────────────────── */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* ── Reduced motion overrides ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
