@@ -9,11 +9,11 @@ import {
 } from "motion/react";
 
 const MESSAGES = [
-  { emoji: "🤖", text: "What would you like to learn today?" },
-  { emoji: "🚀", text: "Let's build your roadmap." },
-  { emoji: "📚", text: "Ready to master a new skill?" },
-  { emoji: "✨", text: "AI-powered learning starts here." },
-  { emoji: "🎯", text: "Tell me your goal — I'll create a plan." },
+  { text: "What would you like to learn today?" },
+  { text: "Let's build your roadmap." },
+  { text: "Ready to master a new skill?" },
+  { text: "AI-powered learning starts here." },
+  { text: "Tell me your goal — I'll create a plan." },
 ];
 
 const SPARKLES = [
@@ -92,8 +92,7 @@ export default function AIMascot() {
             className="relative bg-white/92 backdrop-blur-md border border-indigo-100/80 shadow-lg shadow-indigo-500/10 rounded-2xl rounded-bl-sm px-4 py-2.5 max-w-[230px]"
           >
             <p className="text-sm font-medium text-gray-700 leading-snug text-center">
-              {MESSAGES[msgIndex].emoji}{" "}
-              <span>{MESSAGES[msgIndex].text}</span>
+              {MESSAGES[msgIndex].text}
             </p>
             {/* Downward tail */}
             <span className="absolute -bottom-[7px] left-6 block w-3.5 h-3.5 rotate-45 bg-white border-r border-b border-indigo-100" />
@@ -295,7 +294,7 @@ export default function AIMascot() {
           AI Online
         </div>
         <p className="text-xs text-gray-400 font-medium tracking-wide">
-          Ready to Generate Roadmaps
+          Ready to learn
         </p>
       </motion.div>
     </div>

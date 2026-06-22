@@ -166,7 +166,7 @@ export default function Hero() {
 
         {/* ── Right: AI mascot ── */}
         <motion.div
-          className="flex-1 flex justify-center lg:justify-end items-center"
+          className="flex-1 flex justify-center items-center"
           initial={reduced ? { opacity: 1 } : { opacity: 0, x: 36 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
