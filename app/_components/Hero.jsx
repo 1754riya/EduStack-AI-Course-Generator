@@ -13,7 +13,7 @@ function Hero() {
             </strong>
           </h1>
 
-          <p className="mt-4 sm:text-xl/relaxed">
+          <p className="mt-4 sm:text-xl/relaxed text-gray-600">
             Unlock personalized education with our AI-powered course generator.
             Tailor your learning path to your goals and interests.
           </p>
