@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 
 const MESSAGES = [
-  { text: "What would you like to learn today?" },
+  { text: "🤖 What would you like to learn today?" },
   { text: "Let's build your roadmap." },
   { text: "Ready to master a new skill?" },
   { text: "AI-powered learning starts here." },
