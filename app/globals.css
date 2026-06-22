@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 220 20% 98%;
+    --foreground: 224 71% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 71% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+    --radius: 0.75rem;
+    --chart-1: 243 75% 59%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    /* Premium deep-navy dark — Linear / GitHub Dark inspired */
+    --background: 222 47% 6%;        /* #09101F – page canvas */
+    --foreground: 210 40% 95%;       /* #EAF0F8 – primary text */
+    --card: 222 47% 10%;             /* #111927 – card surface */
+    --card-foreground: 210 40% 95%;
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 243 75% 65%;          /* lighter indigo for contrast */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 15%;        /* #192235 – secondary bg */
+    --secondary-foreground: 210 40% 90%;
+    --muted: 222 47% 15%;
+    --muted-foreground: 215 20% 55%; /* #7A8CA0 – subdued text */
+    --accent: 222 47% 17%;           /* #1D2840 – hover accent */
+    --accent-foreground: 210 40% 95%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 47% 18%;           /* #202E48 – subtle borders */
+    --input: 222 47% 18%;
+    --ring: 243 75% 65%;
+    --chart-1: 243 75% 65%;
+    --chart-2: 160 55% 50%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 65%;
+    --chart-5: 340 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── Smooth theme transition (only bg/border, keeps motion/react fast) */
+*:not([data-motion]):not([style*="transform"]) {
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+/* ── Premium scrollbar ──────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: hsl(220 13% 84%);
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb { background: hsl(222 47% 22%); }
+::-webkit-scrollbar-thumb:hover { background: hsl(220 9% 65%); }
+.dark ::-webkit-scrollbar-thumb:hover { background: hsl(222 47% 30%); }
